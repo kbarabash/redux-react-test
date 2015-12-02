@@ -28,15 +28,11 @@ module.exports = {
         loaders: [{
             test: /\.js$/,
             include: path.join(__dirname, 'src'),
-            loaders: ['react-hot', 'babel', 'eslint-loader'],
+            loaders: ['react-hot', 'babel'],
             exclude: /(node_modules|bower_components|build|dist)/
         }, {
             test: /\.css$/,
             loader: 'style-loader!css-loader'
         }]
-    },
-    eslint: {
-        configFile: '.eslintrc',
-        formatter: require("eslint-friendly-formatter")
     }
 };

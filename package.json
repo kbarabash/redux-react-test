@@ -4,7 +4,7 @@
     "description": "Basic react-redux application",
     "main": "index.js",
     "scripts": {
-        "start": "npm run lint && node server-dev.js",
+        "start": "node server-dev.js",
         "deploy": "npm run lint && webpack -p --config webpack.production.config.js",
         "lint": "eslint --format './node_modules/eslint-friendly-formatter' ./src"
     },
@@ -21,7 +21,6 @@
         "eslint": "1.10.3",
         "eslint-plugin-react": "3.11.1",
         "eslint-friendly-formatter": "1.2.2",
-        "eslint-loader": "1.1.1",
         "react-hot-loader": "1.3.0",
         "babel-preset-react": "6.1.18",
         "babel-preset-es2015": "6.1.18",
