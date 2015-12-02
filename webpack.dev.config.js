@@ -7,7 +7,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
-        path.resolve(__dirname, './src/index.jsx')
+        path.resolve(__dirname, './src/index.js')
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -22,17 +22,21 @@ module.exports = {
         new webpack.NoErrorsPlugin()
     ],
     resolve: {
-        extensions: ['', '.js', '.jsx']
+        extensions: ['', '.js']
     },
     module: {
         loaders: [{
-            test: /\.jsx?$/,
+            test: /\.js$/,
             include: path.join(__dirname, 'src'),
-            loaders: ['react-hot', 'babel'],
-            exclude: /(node_modules|bower_components)/
+            loaders: ['react-hot', 'babel', 'eslint-loader'],
+            exclude: /(node_modules|bower_components|build|dist)/
         }, {
             test: /\.css$/,
             loader: 'style-loader!css-loader'
         }]
+    },
+    eslint: {
+        configFile: '.eslintrc',
+        formatter: require("eslint-friendly-formatter")
     }
 };
