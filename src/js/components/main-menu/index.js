@@ -8,10 +8,10 @@ export default class MainMenu extends React.Component {
         return (
             <menu className="main-menu">
                 <li className="maine-menu__item">
-                    <Link to="todos">Todos</Link>
+                    <Link to="page1">Page1</Link>
                 </li>
                 <li className="maine-menu__item">
-                    <Link to="simple-element">Simple-element</Link>
+                    <Link to="page2">Page2</Link>
                 </li>
             </menu>
         );
