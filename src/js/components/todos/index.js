@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default class AppView extends React.Component {
+export default class TodosView extends React.Component {
     render() {
         return (
-            <div id="app-view">
+            <div>
                 <h1 className="todo-title">Todos</h1>
                 <hr/>
                 {this.props.children}
-             </div>
+            </div>
         );
     }
 }

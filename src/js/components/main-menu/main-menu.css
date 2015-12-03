@@ -1,0 +1,26 @@
+.main-menu {
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.maine-menu__item {
+    margin-right: 2px;
+    list-style-type: none;
+    display: inline-block;
+}
+
+.maine-menu__item a {
+    font-size: 20px;
+    padding: 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.maine-menu__item a:link, .maine-menu__item a:visited, .maine-menu__item a:active {
+    color: black;
+    text-decoration: none;
+}
+.maine-menu__item a:hover {
+    color: white;
+    background-color: grey;
+}
