@@ -14,6 +14,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [
+        new webpack.optimize.OccurenceOrderPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
             inject: true

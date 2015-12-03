@@ -14,6 +14,7 @@ module.exports = {
             inject: true,
             hash: true
         }),
+        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false

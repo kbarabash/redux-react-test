@@ -9,7 +9,7 @@ export default class AppView extends React.Component {
                 <div>
                     {this.props.children}
                 </div>
-             </div>
+            </div>
         );
     }
 }

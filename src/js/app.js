@@ -2,8 +2,9 @@ import '../css/main.css';
 
 import React from 'react';
 import { render } from 'react-dom';
-import Router from './router';
+import Root from './pages/root';
+
 
 render((
-    <Router />
+    <Root />
 ), document.getElementById('react-view'));
