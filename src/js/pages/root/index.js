@@ -1,5 +1,4 @@
 import React from 'react';
-import MainMenu from '../../components/main-menu';
 import DevTools from '../../components/dev-tools';
 import { Provider } from 'react-redux';
 import { ReduxRouter } from 'redux-router';

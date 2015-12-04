@@ -2,7 +2,7 @@ import DevTools from '../../../components/dev-tools';
 import { compose, createStore, combineReducers } from 'redux';
 import routes from '../routes';
 import createHistory from 'history/lib/createBrowserHistory';
-import { ReduxRouter, reduxReactRouter, routerStateReducer } from 'redux-router';
+import { reduxReactRouter, routerStateReducer } from 'redux-router';
 
 const finalCreateStore = compose(
     reduxReactRouter({ routes, createHistory }),
