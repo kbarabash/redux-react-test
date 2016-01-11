@@ -5,8 +5,11 @@
     "main": "index.js",
     "scripts": {
         "start": "node server-dev.js",
-        "deploy": "npm run lint && webpack -p --config webpack.production.config.js",
-        "lint": "eslint --format './node_modules/eslint-friendly-formatter' ./src"
+        "deploy": "npm run lint && npm run test && webpack -p --config webpack.production.config.js",
+        "lint": "eslint --format './node_modules/eslint-friendly-formatter' ./src",
+
+        "test": "mocha --compilers js:babel-core/register ./src/js/**/*.test.js",
+        "test:watch": "npm test -- --watch"
     },
     "dependencies": {
         "redux": "3.0.4",
@@ -35,6 +38,9 @@
         "html-webpack-plugin": "1.7.0",
         "redux-devtools": "3.0.0-beta-3",
         "redux-devtools-dock-monitor": "^1.0.0-beta-3",
-        "redux-devtools-log-monitor": "^1.0.0-beta-3"
+        "redux-devtools-log-monitor": "^1.0.0-beta-3",
+
+        "mocha": "2.3.4",
+        "chai": "3.4.1"
     }
 }
