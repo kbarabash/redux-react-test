@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var settings = require('./settings.json');
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -33,7 +34,10 @@ module.exports = {
             exclude: /(node_modules|bower_components|build|dist)/
         }, {
             test: /\.css$/,
-            loader: 'style-loader!css-loader'
+            loader: 'style-loader!css-loader?root=.!autoprefixer-loader?browsers=last 2 versions'
+        }, {
+            test: /\.(png|jpg|jpeg|gif)$/,
+            loader: 'url-loader?limit=' + settings.CSS.BASE64_SIZE_LIMIT + '&name=images/[hash:6].[ext]'
         }]
     }
 };

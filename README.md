@@ -15,3 +15,9 @@ npm run deploy
 ```
 npm run lint
 ```
+
+##test
+
+```
+npm test
+```

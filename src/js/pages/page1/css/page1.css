@@ -1,0 +1,8 @@
+.page1__title {
+    color: red;
+}
+.page1_image {
+    width: 375px;
+    height: 132px;
+    background: url('../img/page1-logo.png');
+}

@@ -1,3 +1,6 @@
 .todo-title {
     color: red;
 }
+body {
+    display: flex;
+}

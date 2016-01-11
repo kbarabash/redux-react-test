@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var settings = require('./settings.json');
 
 module.exports = {
     entry: path.resolve(__dirname, './src/js/app.js'),
@@ -32,12 +33,15 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+            loader: 'style-loader!css-loader?root=.!autoprefixer-loader?browsers=last 2 versions'
         }, {
             test: /\.js$/,
             include: path.join(__dirname, 'src'),
             loader: 'babel',
             exclude: /(node_modules|bower_components|build|dist)/
+        }, {
+            test: /\.(png|jpg|jpeg|gif)$/,
+            loader: 'url-loader?limit=' + settings.CSS.BASE64_SIZE_LIMIT + '&name=images/[hash:6].[ext]'
         }]
     }
 };

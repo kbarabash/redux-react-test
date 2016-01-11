@@ -1,4 +1,7 @@
 {
     "DEFAULT_PORT": 3000,
-    "IP": "localhost"
+    "IP": "localhost",
+    "CSS": {
+        "BASE64_SIZE_LIMIT": "5000"
+    }
 }
